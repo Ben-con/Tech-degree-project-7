@@ -102,8 +102,8 @@
         </div>
     </div>
 </section>
-<section class="members">
-    <h2>New Members</h2>
+<section class="new-members">
+    <h2 class="member-headers">New Members</h2>
     <div class="member-container">
         <img src="images/member-1.jpg" class="member-image">
         <div class="member-text">
@@ -136,8 +136,10 @@
         </div>
         <p>10/15/20</p>
     </div>
+ </section> 
+ <section class="recent-activity">  
     <div class="member-container">
-        <p>Recent Activity</p>
+        <h2 class="member-headers">Recent Activity</h2>
         <img src="images/member-1.jpg" class="member-image">
         <div class="member-text">
             <p>victoria Chambers commented on <strong>WebApp's Seo Tips</strong></p>
@@ -167,20 +169,20 @@
     </div>
 </section>
 <section class="message">
-    <p>Message User</p>
-<form class=" widget-container">
+    <h2 class="member-headers">Message User</h2>
+<form class="message-container">
 <input type="text" placeholder="Search for user"  class= "form-field"id="user-search">
-<textarea placeholder="Message a user" class="form-area" id="message field" cols="30" rows="10"></textarea>
+<textarea placeholder="Message a user" class="form-area" id="message field" cols="15" rows="5"></textarea>
 <button class="main-button" id="send">send</button>
 </form>
 </section>
 <section class="settings">
-    <h3>settings</h3>
+    <h3 class="member-headers">settings</h3>
     <label class="switch-light switch-candy" onclick="">
         <input type="checkbox">
       
         <strong>
-          Send Email notifications
+         <p class="notify">Send Email notifications</p>
         </strong>
       
         <span>
@@ -193,7 +195,7 @@
         <input type="checkbox">
       
         <strong>
-          set Profile to public
+            <p class="notify">set Profile to public</p>
         </strong>
       
         <span>
@@ -211,7 +213,7 @@
           <option> Atlantic time</option>
       </select>
       <div class="setting-buttons">
-        <button class="main-button" id="save">save</button>
+        <button class="save-button" id="save">save</button>
         <button class="button-dis" id="cancel">cancel</button>
       </div>
 </section>
