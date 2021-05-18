@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 body{
     margin: 0;
@@ -77,10 +78,12 @@ img{
 /* Styling the main element */
 .main{
     grid-area: main;
-    display: flex;
-    flex-direction: column;
 }
-    
+    .test{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 
 /* Styling the dashboard */
 
@@ -88,23 +91,37 @@ img{
     display: flex;
     flex-direction: row;
 }
+
+.dash-search {
+    flex-basis: 75%;
+  }
+  
 .dash-search input{
     height: 79.88px;
     margin-top: 0;
     font-size: 1.6em;
-     width: 14.5em
+     width: 100%
 }
 .dash-board-header h1{
     font-size: 1.4em;
     margin-right: .5em;
     margin-left: .5em;
-    width:25%
+    flex-basis: 25%
 }
 
 
 /* ------------------------------------ */
 
 /* Styling the traffic widget */
+
+.traffic-header{
+    display: flex;
+    flex-direction: column;
+}
+.traffic-header h3{
+width: 30%;
+}
+
 .traffic,.daily{
     border-bottom: 1px black solid;
 }
@@ -138,6 +155,11 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px black s;
+}
+.daily{
+    display: flex;
+    flex-direction: column;
 }
 
 /* ------------------------------------ */
@@ -145,7 +167,7 @@ img{
 
 .placeholder{
     margin-top: 1em;
-    width: 90%;
+    width: 80%;
     height: 350px;
 }
 
@@ -245,7 +267,7 @@ height: auto;
     margin-left: 1.5rem;
     align-self: start;
     font-size: 2rem;
-    width: 100%;
+    flex-basis: 90%;
 }
 
 .recent-activity{
@@ -299,10 +321,14 @@ height: auto;
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;  
+    
 }
 span{
-    width: 40%;
+    flex-basis: 20%;
+    margin-left: auto;
+    
+    
 }
 
 #timezone{
@@ -328,6 +354,10 @@ span{
     border: 2px lightsteelblue solid;
     border-radius: 5%;
 }
+.notify{
+    margin-left: 1.5rem;
+    font-size: 2rem;
+}
 
 .save-button{
     background-color: #7477bf;
@@ -345,10 +375,6 @@ span{
 /* ------------------------------------ */
 
 
-
-
-
-
 .grid-container{
     display: grid;
     grid-template-columns: 100%;
@@ -360,4 +386,47 @@ span{
     ;
 }
 
+@media (min-width: 768px) {
+    .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+    "header header"
+    "nav main";
+    }
+    nav{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .test{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .daily{
+        width: 48%;
+    }
 
+    .social-stats{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .social-container{
+     flex-basis:30%
+    }
+    .social-stats h2{
+        width: 100%;
+    }
+    .member-container{
+        flex-direction: row;
+        padding: 1rem;
+    }
+    .traffic-header{
+        flex-direction: row;
+    }
+    .traffic ol{
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        align-items: center;
+    }
+}
