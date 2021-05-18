@@ -6,6 +6,15 @@ body{
 }
 
 /* Styling the header */
+.header{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    grid-area: header;
+    background-color: #7477bf;
+}
+
 header h1{
     margin-right: auto;
     margin-left: .5em;
@@ -126,6 +135,12 @@ img{
 
 
 /* styling social */
+
+.social-stats{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 .social-container{
     display: flex;
     background-color: lightgray;
@@ -134,12 +149,15 @@ img{
     width: 90%;
     margin: 0 auto;
     margin-bottom: 1em;
+    flex-basis: 40%;
     
 }
 
 .social-img{
+height: 10%;
 width: 25%;
 display: inline-block;
+margin-top: .5em;
 margin-left: 1em;
 margin-right: 1em;;
 align-content: center;
@@ -198,14 +216,6 @@ align-content: center;
     'nav'
     'main'
     ;
-}
-.header{
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    grid-area: header;
-    background-color: #7477bf;
 }
 
 .main{
