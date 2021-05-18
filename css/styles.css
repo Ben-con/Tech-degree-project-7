@@ -29,24 +29,26 @@ header .svg-image{
     height: 2em;
     width: 2em;
     margin: .5em 1em 0 0;
-    color: white;
+    filter:  invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
 .student h3{
     display: inline-block;
-  margin: 0 1em 0 0;
+  margin: 0 1em 0 .5em;
   text-align: center;
   color: white;
-
 }
 .student{
     height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .student img{
     border-radius: 50%;
     margin-left: .5em;
     margin-right: .5em;
-    margin-top: 1em;
+   
 }
 /* ------------------------------------ */
 /* Styling the nav */
@@ -80,14 +82,15 @@ img{
 
 /* Styling the dashboard */
 
-.dash-board-header h1,.dash-search{
-    display: inline-block;
+.dash-board-header{
+    display: flex;
+    flex-direction: row;
 }
 .dash-search input{
     height: 79.88px;
     margin-top: 0;
     font-size: 1.6em;
-     width: auto;
+     width: 14.5em
 }
 .dash-board-header h1{
     font-size: 1.4em;
@@ -125,13 +128,25 @@ img{
     font-size: 1.4em;
     margin-left: .5em;
 }
+.line{
+    filter:  invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+ }
+
+ .widget-container,.widget-half{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* ------------------------------------ */
+
+
 .placeholder{
     margin-top: 1em;
-    width: 100%;
-    height: 200px;
+    width: 90%;
+    height: 350px;
 }
+
 
 
 /* styling social */
@@ -139,7 +154,7 @@ img{
 .social-stats{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .social-container{
     display: flex;
@@ -156,14 +171,13 @@ img{
 .social-img{
 height: 10%;
 width: 25%;
-display: inline-block;
 margin-top: .5em;
 margin-left: 1em;
 margin-right: 1em;;
 align-content: center;
 }
 .social-text{
-    display: inline-block;
+   
     width: 70%;
 }
 .company,.numbers{
@@ -181,9 +195,43 @@ align-content: center;
     margin-bottom: .3em;
 }
 
+.fill{
+    fill: #7477bf;
+}
+
 
 /* ------------------------------------ */
+/* Styleing the members */
 
+.members{
+    border-top: 1px black solid;
+    margin-top: 1em;
+}
+
+.member-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px black solid;
+    margin-bottom: 1em;
+}
+
+.member-text{
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.member-image{
+border-radius: 50%;
+width: auto;
+height: auto;
+}
+
+
+
+
+
+/* ------------------------------------ */
 
 
 
