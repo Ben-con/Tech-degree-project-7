@@ -125,6 +125,12 @@ width: 30%;
 .traffic,.daily{
     border-bottom: 1px black solid;
 }
+.daily{
+    width: 100%;
+    display: flex;
+    flex-basis: row;
+
+}
 .traffic-nav{
     text-align: center;
     padding: 0;
@@ -155,7 +161,7 @@ width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px black s;
+    border: 1px black solid;
 }
 .daily{
     display: flex;
@@ -232,6 +238,7 @@ align-content: center;
     margin-top: 1em;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .member-container{
@@ -273,6 +280,7 @@ height: auto;
 .recent-activity{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 /* ------------------------------------ */
 
@@ -402,8 +410,10 @@ span{
         flex-wrap: wrap;
     }
     
-    .daily{
-        width: 48%;
+   
+
+    .widget-half{
+        flex-basis: 50%;
     }
 
     .social-stats{
@@ -428,5 +438,26 @@ span{
         flex-direction: row;
         margin: 0 auto;
         align-items: center;
+    }
+    .daily{
+        display: flex;
+        flex-direction: row;
+    }
+    .placeholder{
+        width: 100%;
+    }
+    .recent-activity .member-container:first-child{
+        height: 400px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .recent-activity,.new-members{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .member-container{
+        flex-basis: 50%;
     }
 }
