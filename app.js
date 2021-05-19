@@ -23,12 +23,13 @@ closeAlert[0].addEventListener('click', () =>{
     overlay.classList.remove('active')
 })
 for (i = 0; i < dismissAlert.length; i++){
-dismissAlert[i].addEventListener('click', e =>{
-    const button = e.target
-    if(button.classList.contains = ('pop-button')){
-        dismissAlert[i].style.display = "none"
-    }
-})
+    dismissAlert[i].addEventListener('click', e =>{
+        const button = e.target
+        if(button.classList.contains = ('pop-button')){
+            dismissAlert[i].style.display = "none"
+        }
+
+    })
 }
 
 
