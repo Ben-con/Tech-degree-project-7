@@ -6,6 +6,52 @@ body{
     margin: 0;
 }
 
+
+.pop-up{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%) scale(0);
+transition: 200m ease-in-out;
+background-color: white;
+border: 1px black solid;
+border-radius: 10px;
+z-index: 10;
+width: 500px;
+max-width: 80%;
+}
+
+.pop-up.active{
+    transform: translate(-50%,-50%) scale(1);
+}
+.pop-up-header,.pop-up-alert{
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 1rem;
+    border: 1px solid black;
+}
+.pop-button,.pop-button-close{
+    margin-left: auto;
+}
+
+#overlay{
+    position: fixed;
+    transition: 200m ease-in-out;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
 /* Styling the header */
 .header{
     align-items: center;
@@ -166,7 +212,7 @@ width: 30%;
     flex-direction: column;
     align-items: center;
     border: 1px black solid;
-    width: 100%;
+    width:  100%
     
 }
 .daily{

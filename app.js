@@ -1,7 +1,37 @@
-const alert = document.getElementById('banner')
+const banner = document.getElementById('banner')
 const trafficCanvas = document.getElementById('traffic-chart')
 const dailyBar = document.getElementById('bar')
 const mobile = document.getElementById('pie')
+const userSearch = document.getElementById('user-search')
+const messageField = document.getElementById('messageField')
+const send = document.getElementById('send')
+const change = document.querySelectorAll('.traffic-nav li')
+const popup = document.getElementsByClassName('svg-image')
+const closeAlert = document.getElementsByClassName('pop-button-close')
+const overlay = document.getElementById('overlay')
+const popUpBox = document.getElementById('pop-up')
+const dismissAlert = document.getElementsByClassName('pop-button')
+
+popup[0].addEventListener('click', () => {
+     popUpBox.classList.add('active')
+     overlay.classList.add('active') 
+})
+
+
+closeAlert[0].addEventListener('click', () =>{
+    popUpBox.classList.remove('active')
+    overlay.classList.remove('active')
+})
+for (i = 0; i < dismissAlert.length; i++){
+dismissAlert[i].addEventListener('click', e =>{
+    const button = e.target
+    if(button.classList.contains = ('pop-button')){
+        dismissAlert[i].style.display = "none"
+    }
+})
+}
+
+
 
 let trafficData = {
     labels:["16-22","23-29","30-5","6-12","13-19","20-26","27-3","4-10","11-17","18-24","25-31"],
@@ -111,7 +141,7 @@ let trafficOptions = {
 
 
 // ------------------------- Making alert banner ----------------------
-alert.innerHTML =
+banner.innerHTML =
 `
 <div class="alert-banner">
 <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
@@ -120,10 +150,41 @@ to complete</p>
 </div>
 `
 
-alert.addEventListener('click', e =>{
+banner.addEventListener('click', e =>{
     const element = e.target;
     if(element.classList.contains = ('alert-banner-close')){
         banner.style.display = "none"
     }
 })
 // --------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+send.addEventListener('click', ()=>{
+    if (userSearch.value === "" && messageField.value === "") {
+        alert("Please fill out user and message fields before sending");
+        } else if (userSearch.value === "" ) {
+        alert("Please fill out user field before sending");
+        
+        } else if (messageField.value === "" ) {
+        alert("Please fill out message field before sending");
+        userSearch.value = ""
+        } else {
+        alert(`Message successfully sent to: ${userSearch.value}`);
+        }
+        });
+
+        console.log(dismissAlert.length)
+        console.log(messageField)
+        console.log(userSearch)

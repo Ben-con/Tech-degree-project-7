@@ -12,13 +12,34 @@
     <header class="header">
         <h1>WebApp&trade;</h1>
         <div class="svg-div">
-            <a href="#"> <img class="svg-image" src="svgs/bell.svg"></a>
+            <a href="#"> <img class="svg-image" id="svg-img" src="svgs/bell.svg"></a>
         </div>
         <div class="student">
             <img src="images/member-1.jpg">
             <h3>Student Name</h3>
         </div>
     </header>
+    <div class="pop-up" id="pop-up">
+        <div class="pop-up-header">
+            <h2>Your Alerts</h2>
+            <button class="pop-button-close">&times;</button>
+        </div>
+        <div class="pop-up-content">
+                <div class="pop-up-alert">
+                    <p>this is a longer alert yay</p>
+                    <button class="pop-button">&times;</button>
+                </div>
+                <div class="pop-up-alert">
+                    <p>this is a short alert</p>
+                    <button class="pop-button">&times;</button>
+                </div>
+                <div class="pop-up-alert">
+                    <p>this is the longest alert that i can think of</p>
+                    <button class="pop-button">&times;</button>
+                </div>
+        </div>
+        
+    </div>
     <nav class="navigation">
             <a href="#"><img class='line'src="svgs/home.svg"></a>
             <a href="#"><img class='line' src="svgs/bar-chart.svg"></a>
@@ -173,7 +194,7 @@
     <h2 class="member-headers">Message User</h2>
 <form class="message-container">
 <input type="text" placeholder="Search for user"  class= "form-field"id="user-search">
-<textarea placeholder="Message a user" class="form-area" id="message field" cols="15" rows="5"></textarea>
+<textarea placeholder="Message a user" class="form-area" id="messageField" cols="15" rows="5"></textarea>
 <button class="main-button" id="send">send</button>
 </form>
 </section>
@@ -220,6 +241,7 @@
 </section>
 </div>
     </main>
+    <div id="overlay"></div>
     <script src="package/dist/chart.js">
     let myChart = new Chart(ctx);
     </script>
