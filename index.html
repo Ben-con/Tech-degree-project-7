@@ -46,7 +46,7 @@
             </ol>
         </div>
         <div class="widget-container">
-            <!-- <canvas id="traffic-chart"></canvas> -->
+            <canvas id="traffic-chart" width="400" height="400"></canvas>
             <img src="images/line-graph-1-what-is.jpeg" class='placeholder'>
         </div>
     </section>
@@ -223,5 +223,9 @@
 </section>
 </div>
     </main>
+    <script src="app.js"></script>
+    <script src="package/dist/chart.js">
+    let myChart = new Chart(ctx);
+    </script>
 </body>
 </html>

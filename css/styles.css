@@ -83,6 +83,7 @@ img{
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        
     }
 
 /* Styling the dashboard */
@@ -177,6 +178,23 @@ width: 30%;
     height: 350px;
 }
 
+.alert-banner{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+    align-content: center;
+    background-color: limegreen;
+    margin-top: 1rem;
+}
+.alert-banner p:first-child{
+margin: auto;
+padding: 1em;
+}
+
+.alert-banner p:last-child{
+    margin-right: 1rem ;
+    }
 
 
 /* styling social */
@@ -261,7 +279,7 @@ align-content: center;
 
 .member-text{
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     width: 80%;
 }
 
@@ -281,6 +299,8 @@ height: auto;
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 1em;
+    border-top: 1px black solid;
 }
 /* ------------------------------------ */
 
@@ -371,7 +391,7 @@ span{
 }
 .notify{
     margin-left: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
 }
 
 .save-button{
@@ -478,5 +498,9 @@ span{
     }
     .save-button,.button-dis,.main-button{
         margin-bottom: 1rem;
+    }
+    .member-text{
+        font-size: 1rem;
+        
     }
 }
