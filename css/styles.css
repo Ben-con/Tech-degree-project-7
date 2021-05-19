@@ -82,7 +82,7 @@ img{
     .test{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
 /* Styling the dashboard */
@@ -286,6 +286,10 @@ height: auto;
 
 
 /* Styling message */
+.message{
+    width: 100%;
+}
+
 .message,.message-container{
     display: flex;
     flex-direction: column;
@@ -323,18 +327,21 @@ height: auto;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    width: 100%;
 }
 
 .switch-light{
     width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;  
+    flex-wrap: wrap; 
+    margin-right: 2rem; 
     
 }
 span{
     flex-basis: 20%;
     margin-left: auto;
+    margin-top: .5rem;
     
     
 }
@@ -446,15 +453,30 @@ span{
     .placeholder{
         width: 100%;
     }
-    .recent-activity .member-container:first-child{
-        height: 400px;
-    }
+    
 }
 
 
 @media (min-width: 1024px) {
     
-    .member-container{
+    .new-members,.recent-activity{
         flex-basis: 50%;
+        align-content: center;
+        
+    }
+    .recent-activity{
+        border-left: 1px black solid
+    }
+    .settings,.message{
+        flex-basis: 50%;
+    }
+    .settings{
+        border-left: 1px black solid;
+    }
+    .save-button,.button-dis{
+        margin-bottom: auto;
+    }
+    .save-button,.button-dis,.main-button{
+        margin-bottom: 1rem;
     }
 }
