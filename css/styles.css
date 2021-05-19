@@ -20,6 +20,7 @@ header h1{
     margin-right: auto;
     margin-left: .5em;
     color: white;
+    font-size: 1rem;
 }
 .svg-div{
     border-right: 1px white solid;
@@ -31,6 +32,8 @@ header .svg-image{
     width: 2em;
     margin: .5em 1em 0 0;
     filter:  invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+    margin-bottom: 1em
+    ;
 }
 
 .student h3{
@@ -163,6 +166,8 @@ width: 30%;
     flex-direction: column;
     align-items: center;
     border: 1px black solid;
+    width: 100%;
+    
 }
 .daily{
     display: flex;
@@ -279,7 +284,7 @@ align-content: center;
 
 .member-text{
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 80%;
 }
 
@@ -321,7 +326,7 @@ height: auto;
 }
 
 .form-field,.main-button,.form-area{
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: .5rem;
     margin-top: 2rem;
 }
@@ -357,6 +362,8 @@ height: auto;
     flex-wrap: wrap; 
     margin-right: 2rem; 
     
+    margin-bottom: .5rem;
+    
 }
 span{
     flex-basis: 20%;
@@ -383,7 +390,7 @@ span{
     margin: 0 auto;
     width: 40%;
     margin-bottom: 3rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 1.5rem;
     color: white;
     border: 2px lightsteelblue solid;
@@ -391,7 +398,7 @@ span{
 }
 .notify{
     margin-left: 1.5rem;
-    font-size: 1.7rem;
+    font-size: 1rem;
 }
 
 .save-button{
