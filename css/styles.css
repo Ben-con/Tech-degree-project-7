@@ -407,7 +407,7 @@ span{
     }
     .test{
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap:wrap
     }
     
    
@@ -453,10 +453,7 @@ span{
 
 
 @media (min-width: 1024px) {
-    .recent-activity,.new-members{
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+    
     .member-container{
         flex-basis: 50%;
     }
