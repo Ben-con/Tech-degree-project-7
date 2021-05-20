@@ -16,6 +16,38 @@ const daily = document.getElementById('daily')
 const weekly = document.getElementById('weekly')
 const monthly = document.getElementById('monthly')
 const rid = document.getElementById ('rid')
+// -------------------------------------------------------
+const onOff1 = document.querySelector ('#prof')
+const onOff2 = document.querySelector ('#mail')
+const time = document.querySelector ('#timezone')
+const save = document.querySelector ('#save')
+const clear = document.querySelector ('#cancel')
+
+const saveTime = () =>{
+    localStorage.setItem('time',time.value)
+}
+
+const storedTime = localStorage.getItem('time')
+
+if (storedTime) {
+    time.value = storedTime
+}
+
+const removeTime = () =>{
+    localStorage.removeItem('time')}
+// -------------------------------------------------------
+
+const saveButton1 = () =>{
+    localStorage.setItem('onOff1', onOff1.value)
+}
+
+const storedOnOff1 = localStorage.getItem('onOff1')
+
+
+clear.addEventListener("click", removeTime)
+save.addEventListener('click',saveTime)
+save.addEventListener('click',saveButton1)
+
 
 daily.addEventListener('click', e =>{
     const ele = e.target;
@@ -241,7 +273,7 @@ banner.addEventListener('click', e =>{
 
 
 send.addEventListener('click', ()=>{
-    if (userSearch.value === "Select a Member" && messageField.value === "") {
+    if (userSearch.value === "" && messageField.value === "") {
         alert("Please fill out user and message fields before sending");
         } else if (userSearch.value === "Select a Member" ) {
         alert("Please fill out user field before sending");
@@ -256,7 +288,7 @@ send.addEventListener('click', ()=>{
         });
 
         console.log(dismissAlert.length)
-        console.log(rid)
+        console.log(time)
         console.log(userSearch)
 
 

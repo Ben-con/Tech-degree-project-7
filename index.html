@@ -194,7 +194,7 @@
 <section class="message">
     <h2 class="member-headers">Message User</h2>
 <form class="message-container">
-    <input type="text" list="datalist" onkeyup="ac(this.value)" class="form-field">
+    <input id="user-search" placeholder="Search for user" type="text" list="datalist" onkeyup="ac(this.value)" class="form-field">
     <datalist id="datalist">
       
     <option value="Dale Byrd"></option>
@@ -215,7 +215,7 @@
 </section>
 <section class="settings">
     <h3 class="member-headers">Settings</h3>
-    <label class="switch-light switch-candy" onclick="">
+    <label id='mail'class="switch-light switch-candy" onclick="">
         <input type="checkbox">
       
         <strong>
@@ -228,7 +228,7 @@
         </span>
       </label>
       <label class="switch-light switch-candy" onclick="">
-        <input type="checkbox">
+        <input type="checkbox" id = 'prof'>
       
         <strong>
             <h2 class="notify">Set profile to public</h2>
