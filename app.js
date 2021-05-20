@@ -15,6 +15,7 @@ const hourly = document.getElementById('hourly')
 const daily = document.getElementById('daily')
 const weekly = document.getElementById('weekly')
 const monthly = document.getElementById('monthly')
+const rid = document.getElementById ('rid')
 
 daily.addEventListener('click', e =>{
     const ele = e.target;
@@ -74,6 +75,11 @@ monthly.addEventListener('click', e =>{
 popup[0].addEventListener('click', () => {
      popUpBox.classList.add('active')
      overlay.classList.add('active') 
+     for (i = 0 ;i < dismissAlert.length; i++){
+         dismissAlert[i].style.display = 'flex'
+        }
+        rid.classList.remove('pop-up-alert')
+         
 })
 
 
@@ -86,7 +92,8 @@ for (i = 0 ;i < dismissAlert.length; i++){
 dismissAlert[i].addEventListener('click', e =>{
     const eve = e.target
     if (eve.className = ('pop-up-alert')) {
-        dismissAlert.style.display = "none"
+        eve.style.display = "none"
+        
     }
 
 })
@@ -249,5 +256,36 @@ send.addEventListener('click', ()=>{
         });
 
         console.log(dismissAlert.length)
-        console.log(messageField)
+        console.log(rid)
         console.log(userSearch)
+
+
+
+
+
+
+
+
+        const tags = [ 
+            'Dale Byrd',
+            'Dan Oliver',
+            'Dawn Wood',
+            'Victoria Chambers'
+
+              ];
+             const n= tags.length;    
+          
+             function ac(value) {
+                document.getElementById('datalist').innerHTML = '';
+                 l=value.length;
+             for (var i = 0; i<n; i++) {
+                 if(((tags[i].toLowerCase()).indexOf(value.toLowerCase()))>-1)
+                 {
+                     const node = document.createElement("option");
+                     const val = document.createTextNode(tags[i]);
+                      node.appendChild(val);
+          
+                       document.getElementById("datalist").appendChild(node);
+                     }
+                 }
+             }

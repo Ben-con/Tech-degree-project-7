@@ -63,6 +63,17 @@ max-width: 80%;
     background-color: #7477bf;
 }
 
+.notifictations {
+    position:absolute;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color:rgb(144 238 144);
+    margin-left:25px;
+    margin-top: 5px;
+    top: auto;
+}
+
 header h1{
     margin-right: auto;
     margin-left: .5em;
@@ -75,14 +86,20 @@ header h1{
 }
 
 header .svg-image{
+    transition:.5s;
     height: 2em;
     width: 2em;
     margin: .5em 1em 0 0;
     filter:  invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-    margin-bottom: 1em
-    ;
+    margin-bottom: 1em;
 }
 
+.svg-image:hover,.notifictations:hover{
+    height: 2.5em;
+    width: 2.5em;
+    transform: rotate(-30deg);
+    margin-right: 10px;
+}
 .student h3{
     display: inline-block;
   margin: 0 1em 0 .5em;
