@@ -10,7 +10,7 @@ const popup = document.getElementsByClassName('svg-image')
 const closeAlert = document.getElementsByClassName('pop-button-close')
 const overlay = document.getElementById('overlay')
 const popUpBox = document.getElementById('pop-up')
-const dismissAlert = document.getElementsByClassName('pop-button')
+const dismissAlert = document.getElementsByClassName('pop-up-alert')
 const hourly = document.getElementById('hourly')
 const daily = document.getElementById('daily')
 const weekly = document.getElementById('weekly')
@@ -81,14 +81,15 @@ closeAlert[0].addEventListener('click', () =>{
     popUpBox.classList.remove('active')
     overlay.classList.remove('active')
 })
-for (i = 0; i < dismissAlert.length; i++){
-    dismissAlert[i].addEventListener('click', e =>{
-        const button = e.target
-        if(button.classList.contains = ('pop-button')){
-            dismissAlert[i].style.display = "none"
-        }
 
-    })
+for (i = 0 ;i < dismissAlert.length; i++){
+dismissAlert[i].addEventListener('click', e =>{
+    const eve = e.target
+    if (eve.className = ('pop-up-alert')) {
+        dismissAlert.style.display = "none"
+    }
+
+})
 }
 
 
