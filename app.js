@@ -80,7 +80,13 @@ clear.addEventListener("click", removeTime)
 save.addEventListener('click',saveTime)
 save.addEventListener('click',saveProfile)
 save.addEventListener('click',saveEmail)
+save.addEventListener('click',() =>{
+    alert("settings saved")
+})
 
+clear.addEventListener('click',() =>{
+    alert("Settings cleared")
+})
 
 daily.addEventListener('click', e =>{
     const ele = e.target;
