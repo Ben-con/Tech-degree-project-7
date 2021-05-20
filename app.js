@@ -16,8 +16,7 @@ const daily = document.getElementById('daily')
 const weekly = document.getElementById('weekly')
 const monthly = document.getElementById('monthly')
 const rid = document.getElementById ('rid')
-// -------------------------------------------------------
-const onOff1 = document.querySelector ('#prof')
+// ------------------------------------------------------
 const onOff2 = document.querySelector ('#mail')
 const time = document.querySelector ('#timezone')
 const save = document.querySelector ('#save')
@@ -37,16 +36,31 @@ const removeTime = () =>{
     localStorage.removeItem('time')}
 // -------------------------------------------------------
 
-const saveButton1 = () =>{
-    localStorage.setItem('onOff1', onOff1.value)
+
+const profile = document.querySelector ('#prof')
+
+const saveProfile= () =>{
+    localStorage.setItem('profile' ,profile.checked)
 }
 
-const storedOnOff1 = localStorage.getItem('onOff1')
+const storedProf = localStorage.getItem('profile')
 
+if (storedProf) {
+    profile.checked = storedProf
+}
 
+const removeProf = () =>{
+    localStorage.removeItem('profile')
+}
+
+// 
+
+//  clear.addEventListener('click',remove2)
+clear.addEventListener('click',removeProf)
 clear.addEventListener("click", removeTime)
 save.addEventListener('click',saveTime)
-save.addEventListener('click',saveButton1)
+save.addEventListener('click',saveProfile)
+// save.addEventListener('click',saveButton2)
 
 
 daily.addEventListener('click', e =>{
@@ -222,6 +236,7 @@ let trafficOptions = {
 
 
                         const mobileOptions = {
+                            aspectRatio: 2,
                             plugins: {
                             legend: {
                             position: 'right',
@@ -288,7 +303,7 @@ send.addEventListener('click', ()=>{
         });
 
         console.log(dismissAlert.length)
-        console.log(time)
+
         console.log(userSearch)
 
 
@@ -321,3 +336,30 @@ send.addEventListener('click', ()=>{
                      }
                  }
              }
+
+            //  const saveButton1 = () =>{
+                //     localStorage.setItem('Off1', onOff1.checked)
+                // }
+                
+                // const stored1 = localStorage.getItem('Off1')
+                
+                // if (stored1) {
+                //     onOff1.checked  = false
+                // }
+                
+                // const remove1 = () =>{
+                //     localStorage.removeItem('Off1')}
+                
+                // // --------------------------------------------------
+                //     const saveButton2 = () =>{
+                //         localStorage.setItem('Off2', onOff2.checked)
+                //     }
+                    
+                //     const stored2 = localStorage.getItem('Off2')
+                    
+                //     if (saveButton2 ) {
+                //         onOff2.checked =stored2
+                //     }
+                    
+                //     const remove2 = () =>{
+                //         localStorage.removeItem('Off2')}
