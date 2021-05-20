@@ -60,10 +60,10 @@
         <div class="traffic-header">
             <h3>Traffic</h3>
             <ol class="traffic-nav">
-                <li class="traffic-link-active">hourly</li>
-                <li class="traffic-link">Daily</li>
-                <li class="traffic-link">Weekly</li>
-                <li class="traffic-link">Monthly</li>
+                <li class="traffic-link-active" id="hourly">hourly</li>
+                <li class="traffic-link" id="daily">Daily</li>
+                <li class="traffic-link" id="weekly">Weekly</li>
+                <li class="traffic-link" id="monthly">Monthly</li>
             </ol>
         </div>
         <div class="widget-container">
@@ -193,7 +193,13 @@
 <section class="message">
     <h2 class="member-headers">Message User</h2>
 <form class="message-container">
-<input type="text" placeholder="Search for user"  class= "form-field"id="user-search">
+<select class= "form-field"id="user-search">
+<option disabled selected>Select a Member</option>
+<option>Dale Byrd</option>
+<option>Dan Oliver</option>
+<option>Dawn wood</option>
+<option>Victoria Chambers</option>
+</select>
 <textarea placeholder="Message a user" class="form-area" id="messageField" cols="15" rows="5"></textarea>
 <button class="main-button" id="send">send</button>
 </form>

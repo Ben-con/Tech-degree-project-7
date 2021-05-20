@@ -11,6 +11,65 @@ const closeAlert = document.getElementsByClassName('pop-button-close')
 const overlay = document.getElementById('overlay')
 const popUpBox = document.getElementById('pop-up')
 const dismissAlert = document.getElementsByClassName('pop-button')
+const hourly = document.getElementById('hourly')
+const daily = document.getElementById('daily')
+const weekly = document.getElementById('weekly')
+const monthly = document.getElementById('monthly')
+
+daily.addEventListener('click', e =>{
+    const ele = e.target;
+    if (ele.classList.contains = ('traffic-link')) {
+        daily.className =('traffic-link-active')
+    }
+    hourly.className =('traffic-link')
+    weekly.className =('traffic-link')
+    monthly.className =('traffic-link')
+    trafficChart.data.datasets[0].data = [1200, 2500, 1500, 1500, 1390, 1800, 250, 1900, 1050, 1400,
+        1500];
+    trafficChart.update();
+})
+
+hourly.addEventListener('click', e =>{
+    const ele = e.target;
+    if (ele.classList.contains = ('traffic-link')) {
+        hourly.className =('traffic-link-active')
+    }
+    daily.className =('traffic-link')
+    weekly.className =('traffic-link')
+    monthly.className =('traffic-link')
+    trafficChart.data.datasets[0].data = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
+        2500]
+    trafficChart.update();
+})
+
+weekly.addEventListener('click', e =>{
+    const ele = e.target;
+    if (ele.classList.contains = ('traffic-link')) {
+        weekly.className =('traffic-link-active')
+    }
+    daily.className =('traffic-link')
+    hourly.className =('traffic-link')
+    monthly.className =('traffic-link')
+    trafficChart.data.datasets[0].data = [200, 1500, 1000, 2500, 1590, 800, 1250, 1600, 1250, 1500,
+        500];
+    trafficChart.update();
+})
+
+monthly.addEventListener('click', e =>{
+    const ele = e.target;
+    if (ele.classList.contains = ('traffic-link')) {
+        monthly.className =('traffic-link-active')
+    }
+    daily.className =('traffic-link')
+    hourly.className =('traffic-link')
+    weekly.className =('traffic-link')
+    trafficChart.data.datasets[0].data = [1400, 2000, 1000, 1500, 1890, 1750, 1500, 1850, 2250, 2500,
+        2500];
+    trafficChart.update();
+    
+})
+
+
 
 popup[0].addEventListener('click', () => {
      popUpBox.classList.add('active')
@@ -48,8 +107,9 @@ let trafficData = {
 let trafficOptions = {
     aspectRatio: 2.5,
     animation: {
-    duration: 0
+    duration: 1000
     },
+    fill: true,
     scales: {
     y: {
     beginAtZero: true
@@ -173,16 +233,17 @@ banner.addEventListener('click', e =>{
 
 
 send.addEventListener('click', ()=>{
-    if (userSearch.value === "" && messageField.value === "") {
+    if (userSearch.value === "Select a Member" && messageField.value === "") {
         alert("Please fill out user and message fields before sending");
-        } else if (userSearch.value === "" ) {
+        } else if (userSearch.value === "Select a Member" ) {
         alert("Please fill out user field before sending");
-        
         } else if (messageField.value === "" ) {
         alert("Please fill out message field before sending");
-        userSearch.value = ""
+        
         } else {
         alert(`Message successfully sent to: ${userSearch.value}`);
+        messageField.value = ""
+        userSearch.value = 'Select a Member'
         }
         });
 

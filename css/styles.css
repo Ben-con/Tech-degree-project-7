@@ -184,14 +184,14 @@ width: 30%;
 .traffic-nav{
     text-align: center;
     padding: 0;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    margin-left: .5em;
+    margin-right: .5em;
     margin-top: 0;
 }
 .traffic-link,.traffic-link-active{
     display: inline-block;
     font-size: 1.3em;
-    margin-right: 1.3em;
+    margin-right: .5em;
 }
 .traffic-link-active{
     border-radius: 30%;
@@ -219,6 +219,7 @@ width: 30%;
     display: flex;
     flex-direction: column;
 }
+
 
 /* ------------------------------------ */
 
@@ -490,10 +491,14 @@ span{
         flex-wrap:wrap
     }
     
-   
+    .widget-container {
+        width: 95vw;
+      }
+     
 
     .widget-half{
         flex-basis: 50%;
+        width: 45vw;
     }
 
     .social-stats{
