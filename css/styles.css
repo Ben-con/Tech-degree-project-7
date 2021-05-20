@@ -34,6 +34,7 @@ max-width: 80%;
 }
 .pop-button,.pop-button-close{
     margin-left: auto;
+    cursor: pointer;
 }
 
 #overlay{
@@ -192,6 +193,7 @@ width: 30%;
     display: inline-block;
     font-size: 1.3em;
     margin-right: .5em;
+    cursor: pointer;
 }
 .traffic-link-active{
     border-radius: 30%;
@@ -238,6 +240,7 @@ width: 30%;
     align-content: center;
     background-color: limegreen;
     margin-top: 1rem;
+    cursor: pointer;
 }
 .alert-banner p:first-child{
 margin: auto;
@@ -376,6 +379,7 @@ height: auto;
     font-size: 1.5rem;
     padding: .5rem;
     margin-top: 2rem;
+    cursor: pointer;
 }
 
 .form-field,.form-area{
@@ -442,6 +446,7 @@ span{
     color: white;
     border: 2px lightsteelblue solid;
     border-radius: 5%;
+    cursor: pointer;
 }
 .notify{
     margin-left: 1.5rem;
