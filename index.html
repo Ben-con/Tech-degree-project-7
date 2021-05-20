@@ -42,15 +42,15 @@
     </div>
     <nav class="navigation">
             <a href="#"><img class='line'src="svgs/home.svg"></a>
-            <a href="#"><img class='line' src="svgs/bar-chart.svg"></a>
-            <a href="#"><img class='line' src="svgs/members.svg"></a>
-            <a href="#"><img class='line' src="svgs/settings.svg"></a>
+            <a href="#bar"><img class='line' src="svgs/bar-chart.svg"></a>
+            <a href="#mem"><img class='line' src="svgs/members.svg"></a>
+            <a href="#save"><img class='line' src="svgs/settings.svg"></a>
     </nav>
     <main class="main">
         <div class="dash-board-header">
             <h1>Dashboard</h1>
             <div class="dash-search">
-                <input type="search" placeholder="search">
+                <input type="search" placeholder="Search">
             </div>
         </div>
         <div class="banner" id="banner">
@@ -60,7 +60,7 @@
         <div class="traffic-header">
             <h3>Traffic</h3>
             <ol class="traffic-nav">
-                <li class="traffic-link-active" id="hourly">hourly</li>
+                <li class="traffic-link-active" id="hourly">Hourly</li>
                 <li class="traffic-link" id="daily">Daily</li>
                 <li class="traffic-link" id="weekly">Weekly</li>
                 <li class="traffic-link" id="monthly">Monthly</li>
@@ -122,7 +122,7 @@
 </section>
 <div class="test">
 <section class="new-members">
-    <h2 class="member-headers">New Members</h2>
+    <h2 class="member-headers" id="mem">New Members</h2>
     <div class="member-container">
         <img src="images/member-1.jpg" class="member-image">
         <div class="member-text">
@@ -183,7 +183,7 @@
     <div class="member-container">
         <img src="images/member-4.jpg" class="member-image">
         <div class="member-text">
-            <p>Dan Oliver posted<strong>WebApp's Seo Tips</strong></p>
+            <p>Dan Oliver posted <strong>WebApp's Seo Tips</strong></p>
             <p>1 day ago</p>
         </div>
     </div>
@@ -201,16 +201,16 @@
 <option>Victoria Chambers</option>
 </select>
 <textarea placeholder="Message a user" class="form-area" id="messageField" cols="15" rows="5"></textarea>
-<button class="main-button" id="send">send</button>
+<button class="main-button" id="send">Send</button>
 </form>
 </section>
 <section class="settings">
-    <h3 class="member-headers">settings</h3>
+    <h3 class="member-headers">Settings</h3>
     <label class="switch-light switch-candy" onclick="">
         <input type="checkbox">
       
         <strong>
-         <p class="notify">Send Email notifications</p>
+         <h2 class="notify">Send email notifications</h2>
         </strong>
         <span>
           <span>Off</span>
@@ -222,7 +222,7 @@
         <input type="checkbox">
       
         <strong>
-            <p class="notify">set Profile to public</p>
+            <h2 class="notify">Set profile to public</h2>
         </strong>
       
         <span>
@@ -241,8 +241,8 @@
           <option> Atlantic time</option>
       </select>
       <div class="setting-buttons">
-        <button class="save-button" id="save">save</button>
-        <button class="button-dis" id="cancel">cancel</button>
+        <button class="save-button" id="save">Save</button>
+        <button class="button-dis" id="cancel">Cancel</button>
       </div>
 </section>
 </div>
