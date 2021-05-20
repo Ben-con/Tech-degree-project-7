@@ -43,7 +43,7 @@ const saveProfile= () =>{
     localStorage.setItem('profile' ,profile.checked)
 }
 
-const storedProf = localStorage.getItem('profile')
+const storedProf = JSON.parse(localStorage.getItem('profile'))
 
 if (storedProf) {
     profile.checked = storedProf
@@ -51,16 +51,35 @@ if (storedProf) {
 
 const removeProf = () =>{
     localStorage.removeItem('profile')
+    
 }
 
-// 
+// -------------------------------------------------------
 
-//  clear.addEventListener('click',remove2)
+const email = document.querySelector ('#mail')
+
+const saveEmail= () =>{
+    localStorage.setItem('email' ,email.checked)
+}
+
+const storedemail = JSON.parse(localStorage.getItem('email'))
+
+if (storedemail) {
+    email.checked = storedemail
+}
+
+const removeEmail = () =>{
+    localStorage.removeItem('email')
+}
+
+
+
+ clear.addEventListener('click',removeEmail)
 clear.addEventListener('click',removeProf)
 clear.addEventListener("click", removeTime)
 save.addEventListener('click',saveTime)
 save.addEventListener('click',saveProfile)
-// save.addEventListener('click',saveButton2)
+save.addEventListener('click',saveEmail)
 
 
 daily.addEventListener('click', e =>{
@@ -302,9 +321,7 @@ send.addEventListener('click', ()=>{
         }
         });
 
-        console.log(dismissAlert.length)
-
-        console.log(userSearch)
+       
 
 
 
