@@ -360,29 +360,4 @@ send.addEventListener('click', ()=>{
                  }
              }
 
-            //  const saveButton1 = () =>{
-                //     localStorage.setItem('Off1', onOff1.checked)
-                // }
-                
-                // const stored1 = localStorage.getItem('Off1')
-                
-                // if (stored1) {
-                //     onOff1.checked  = false
-                // }
-                
-                // const remove1 = () =>{
-                //     localStorage.removeItem('Off1')}
-                
-                // // --------------------------------------------------
-                //     const saveButton2 = () =>{
-                //         localStorage.setItem('Off2', onOff2.checked)
-                //     }
-                    
-                //     const stored2 = localStorage.getItem('Off2')
-                    
-                //     if (saveButton2 ) {
-                //         onOff2.checked =stored2
-                //     }
-                    
-                //     const remove2 = () =>{
-                //         localStorage.removeItem('Off2')}
+           
