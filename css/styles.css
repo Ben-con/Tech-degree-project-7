@@ -296,27 +296,8 @@ padding: 1em;
     height: 80%;
     width: 1em;
 }
-.fill{
-    fill: white;
-    background-color: #7477bf;
-    border: 15px #7477bf solid;
-    border-radius: 2.1em;
-    height: 5em;
-    width: 5em;
-}
 
-
-.fill2{
-    fill: #7477bf;;
-    background-color:#7477bf; ;
-    border: 15px #7477bf solid;
-    border-radius:2.1em;
-    height: 5em;
-    width: 5em;
-    
-
-}
-.stroke{
+.fill2,.fill{
     fill: white;
     
     
@@ -324,11 +305,14 @@ padding: 1em;
     
 
 .social-img{
-height: 100%;
-margin-top: 1em;
-margin-left: 1em;
-margin-right: 1em;;
-align-content: center;
+    align-self: center;
+    height: 4.5rem;
+    width: 4.5rem;
+    padding: 1rem;
+    margin-right: .5em;
+    margin-left: .5em;
+    background: #7477bf;
+    border-radius: 50%;
 }
 .social-text{
    
@@ -541,11 +525,8 @@ span{
     "header header"
     "nav main";
     }
-    .fill,.fill2{
-        height: 4em;
-        width: 4em;
-        border-radius: 1.7em;
-    }
+    
+    
     .traffic-nav{
         width: 100%;
         justify-content: flex-end;
