@@ -301,9 +301,9 @@ padding: 1em;
     background-color: #7477bf;
     border: 15px #7477bf solid;
     border-radius: 50%;
-    padding: 0;
+    
     height: 5em;
-    width: em;
+    width: 5em;
 }
 
 
@@ -318,7 +318,6 @@ padding: 1em;
 }
 .stroke{
     stroke: white;
-    
 }
     
 
