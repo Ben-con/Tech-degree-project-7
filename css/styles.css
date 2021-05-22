@@ -300,8 +300,7 @@ padding: 1em;
     fill: white;
     background-color: #7477bf;
     border: 15px #7477bf solid;
-    border-radius: 50%;
-    
+    border-radius: 2.1em;
     height: 5em;
     width: 5em;
 }
@@ -311,13 +310,16 @@ padding: 1em;
     fill: #7477bf;;
     background-color:#7477bf; ;
     border: 15px #7477bf solid;
-    border-radius: 50%;
+    border-radius:2.1em;
     height: 5em;
     width: 5em;
+    
 
 }
 .stroke{
-    stroke: white;
+    fill: white;
+    
+    
 }
     
 
@@ -543,6 +545,7 @@ span{
     .fill,.fill2{
         height: 4em;
         width: 4em;
+        border-radius: 1.8em;
     }
     .traffic-nav{
         width: 100%;
