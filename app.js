@@ -17,7 +17,6 @@ const weekly = document.getElementById('weekly')
 const monthly = document.getElementById('monthly')
 const rid = document.getElementById ('rid')
 // ------------------------------------------------------
-const onOff2 = document.querySelector ('#mail')
 const time = document.querySelector ('#timezone')
 const save = document.querySelector ('#save')
 const clear = document.querySelector ('#cancel')
@@ -86,6 +85,9 @@ save.addEventListener('click',() =>{
 
 clear.addEventListener('click',() =>{
     alert("Settings cleared")
+    time.value = "Select a timezone"
+    profile.checked = false
+    email.checked = false
 })
 
 daily.addEventListener('click', e =>{

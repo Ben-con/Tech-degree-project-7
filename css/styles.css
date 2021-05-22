@@ -87,20 +87,21 @@ header h1{
 
 header .svg-image{
     transition:.5s;
-    height: 2em;
+    height: 1.2em;
     width: 2em;
-    margin: .5em 1em 0 0;
+    margin: .5em .5em 0 0;
     filter:  invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
     margin-bottom: 1em;
 }
 
 .svg-image:hover,.notifictations:hover{
-    height: 2.5em;
-    width: 2.5em;
+    height: 1.5em;
+    width: 1.5em;
     transform: rotate(-30deg);
     margin-right: 10px;
 }
 .student h3{
+    font-size: 1rem;
     display: inline-block;
   margin: 0 1em 0 .5em;
   text-align: center;
@@ -205,11 +206,13 @@ width: 30%;
     margin-left: .5em;
     margin-right: .5em;
     margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
 }
 .traffic-link,.traffic-link-active{
-    display: inline-block;
     font-size: 1.3em;
-    margin-right: .5em;
     cursor: pointer;
 }
 .traffic-link-active{
@@ -288,10 +291,38 @@ padding: 1em;
     
 }
 
+.svg{
+    height: 80%;
+    width: 1em;
+}
+.fill{
+    fill: white;
+    background-color: #7477bf;
+    border: 15px #7477bf solid;
+    border-radius: 50%;
+    padding: 0;
+}
+.soc{
+    height: 80%;
+   width: 20%;
+}
+
+.fill2{
+    fill: #7477bf;;
+    background-color:#7477bf; ;
+    border: 30px #7477bf solid;
+    border-radius: 50%;
+
+}
+.stroke{
+    stroke: white;
+}
+    
+
 .social-img{
-height: 10%;
-width: 25%;
-margin-top: .5em;
+height: 100%;
+width: 250%;
+margin-top: 1em;
 margin-left: 1em;
 margin-right: 1em;;
 align-content: center;
@@ -315,9 +346,6 @@ align-content: center;
     margin-bottom: .3em;
 }
 
-.fill{
-    fill: #7477bf;
-}
 
 
 /* ------------------------------------ */
@@ -436,7 +464,7 @@ height: auto;
 span{
     flex-basis: 20%;
     margin-left: auto;
-    margin-top: .5rem;
+    text-align: center; ;
     
     
 }
@@ -458,7 +486,7 @@ span{
     margin: 0 auto;
     width: 40%;
     margin-bottom: 3rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 1.5rem;
     color: white;
     border: 2px lightsteelblue solid;
@@ -477,7 +505,11 @@ span{
     background-color: lightgray;
 }
 
-
+.arrow{
+    display: none;
+    font-size: 1.5rem;
+    color: grey;
+}
 
 
 /* ------------------------------------ */
@@ -504,6 +536,13 @@ span{
     "header header"
     "nav main";
     }
+    .traffic-nav{
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .traffic-link,.traffic-link-active{
+        margin-right: 1em;
+    }
     nav{
         flex-direction: column;
         justify-content: flex-start;
@@ -517,6 +556,13 @@ span{
         width: 95vw;
       }
      
+      .member-text{
+          text-align: left;
+          margin-left: 1em;
+      }
+      .arrow{
+          display: flex;
+      }
 
     .widget-half{
         flex-basis: 50%;
