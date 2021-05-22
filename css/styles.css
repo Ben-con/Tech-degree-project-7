@@ -306,13 +306,14 @@ padding: 1em;
 
 .social-img{
     align-self: center;
-    height: 4.5rem;
-    width: 4.5rem;
+    height: 5.5rem;
+    width: 5.5rem;
     padding: 1rem;
     margin-right: auto;
     margin-left: .5em;
     background: #7477bf;
     border-radius: 50%;
+    
 }
 .social-text{
    
@@ -525,7 +526,10 @@ span{
     "header header"
     "nav main";
     }
-    
+    .social-img{
+        height: 4.5rem;
+    width: 4.5rem;
+    }
     
     .traffic-nav{
         width: 100%;
